@@ -59,4 +59,12 @@ Run the static site locally (using NodeJS). URL: _localhost:5000_
 Run storybook. URL: _localhost:6006_
 
 
+### TODO:
+
+* Add tests
+* Change `home` to `index` for convention in `pages`  
+* Add further configuration
+* Fix yarn dependency with MUI resolutions
+
+
 v0.0.0-beta.1
