@@ -34,7 +34,7 @@ export const Routes = (): JSX.Element => {
                 {routes.map(({ path, component: Component = Fragment }) => (
                     <Route key={path} path={path} element={<Component/>}  />
                 ))}
-                {process.env.CONTEXT !== 'static' && <Route path="*" element={<NotFound/>}/>}
+                <Route path="*" element={<NotFound/>}/>
             </BrowserRoutes>
         </App>
     )
