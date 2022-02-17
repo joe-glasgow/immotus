@@ -23,7 +23,7 @@ export function render(location, context) {
     <link rel="icon" type="image/svg+xml" href="/src/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     ${styleTags}
-    <title>Vite App</title>
+    <title>Immotus</title>
   </head>
   <body>
     <div id="app">${html}</div>
