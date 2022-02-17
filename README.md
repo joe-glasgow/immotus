@@ -62,6 +62,7 @@ Run storybook. URL: _localhost:6006_
 ### TODO:
 
 * Add tests
+* Add linting
 * Change `home` to `index` for convention in `pages`  
 * Add further configuration
 * Fix yarn dependency with MUI resolutions
