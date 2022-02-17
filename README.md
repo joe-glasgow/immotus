@@ -3,6 +3,17 @@ Immotus
 
 ###### _\-beta_
 
+_Immotus_ - unmoved, **static**, motionless, immovable, unchanged, still
+
+A Static Site Generator for Vite, using:
+
+*   React
+*   React Router
+*   TypeScript,
+*   Material UI
+*   Styled Components
+*   Storybook
+
 **Note:** Due to issues with SSR in Material UI and styled-components, this project currently uses yarn. However when resolved it is intended to be agnostic of either _yarn_ or _npm_.
 
 Structure:
@@ -47,6 +58,5 @@ Run the static site locally (using NodeJS). URL: _localhost:5000_
 
 Run storybook. URL: _localhost:6006_
 
-Home
 
 v0.0.0-beta.1
