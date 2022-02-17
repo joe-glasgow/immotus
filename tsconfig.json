@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*", "./dist/*"],
+      "@mui/styled-engine": ["./node_modules/@mui/styled-engine-sc"]
+    },
+    "target": "esnext",
+    "module": "commonjs",
+    "useDefineForClassFields": true,
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "allowJs": false,
+    "skipLibCheck": false,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "Node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "types": ["vite/client"],
+    "typeRoots": [
+      "node_modules/@types",
+      "node_modules/@types/node"
+    ]
+  },
+  "include": ["./src"],
+  "references": [{ "path": "./tsconfig.node.json" }]
+}
