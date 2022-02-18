@@ -5,10 +5,11 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "ts-node server",
-    "build": "yarn run build:client && yarn run build:server",
+    "build": "yarn run build:static && yarn run build:client && yarn run build:server",
+    "build:static": "vite build --outDir dist/static",
     "build:client": "vite build --outDir dist/client",
     "build:server": "vite build --ssr src/entry-server.tsx --outDir dist/server",
-    "generate": "vite build --outDir dist/static && yarn run build && tsc prerender.ts; node prerender",
+    "generate": "yarn run build && tsc prerender.ts; node prerender",
     "serve": "cross-env NODE_ENV=production ts-node server.ts",
     "serve:dev": "cross-env ts-node server.ts",
     "static": "yarn run generate && ts-node static-server.ts",

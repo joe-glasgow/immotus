@@ -19,14 +19,14 @@ void (async () => {
   // pre-render each route...
   // eslint-disable-next-line no-restricted-syntax
   for (const url of routesToPrerender) {
-    const context = {};
     // eslint-disable-next-line
-    const appHtml = await render(url, context);
+    const [styleTags, html] = await render(url)
 
-    const html = template.replace('<!--app-html-->', appHtml);
+    const replaceHtml = template.replace('<!--preload-links-->', styleTags)
+      .replace('<!--app-html-->', html);
 
     const filePath = `dist/static${url === '/' ? '/index' : url}.html`;
-    fs.writeFileSync(toAbsolute(filePath), html);
+    fs.writeFileSync(toAbsolute(filePath), replaceHtml);
     // eslint-disable-next-line no-console
     console.log('pre-rendered:', filePath);
   }
