@@ -25,3 +25,9 @@ dist-ssr
 
 # if using yarn
 package-lock.json
+
+# compiled
+server.js
+prerender.js
+src/entry-server.js
+src/entry-client.js
