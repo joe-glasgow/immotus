@@ -14,7 +14,9 @@
     "static": "yarn run generate && ts-node static-server.ts",
     "debug": "node --inspect-brk server",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "lint": "npx eslint . --ext .ts,.tsx",
+    "lint:fix": "npx eslint . --ext .ts,.tsx --fix"
   },
   "dependencies": {
     "@emotion/react": "^11.7.1",
