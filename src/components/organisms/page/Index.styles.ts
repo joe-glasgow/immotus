@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const StyledList = styled.ul`
   list-style-type: none;
@@ -8,4 +8,4 @@ export const StyledList = styled.ul`
   flex-direction: column;
   justify-self: center;
   align-self: center;
-`
+`;
