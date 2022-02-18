@@ -38,16 +38,19 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 exports.__esModule = true;
 var fs = require("fs");
 var path = require("path");
-var entry_server_js_1 = require("./dist/server/entry-server.js");
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+var entry_server_1 = require("./dist/server/entry-server");
 var toAbsolute = function (p) { return path.resolve(__dirname, p); };
 var template = fs.readFileSync(toAbsolute('dist/static/index.html'), 'utf-8');
 // determine routes to pre-render from src/pages
 var routesToPrerender = fs.readdirSync(toAbsolute('src/pages'))
     .map(function (file) {
     var name = file.replace(/\.tsx$/, '').toLowerCase();
-    return name === 'home' ? "/" : "/".concat(name);
+    return name === 'home' ? '/' : "/".concat(name);
 });
-(function () { return __awaiter(void 0, void 0, void 0, function () {
+// eslint-disable-next-line no-void
+void (function () { return __awaiter(void 0, void 0, void 0, function () {
     var _i, routesToPrerender_1, url, context, appHtml, html, filePath;
     return __generator(this, function (_a) {
         switch (_a.label) {
@@ -58,12 +61,13 @@ var routesToPrerender = fs.readdirSync(toAbsolute('src/pages'))
                 if (!(_i < routesToPrerender_1.length)) return [3 /*break*/, 4];
                 url = routesToPrerender_1[_i];
                 context = {};
-                return [4 /*yield*/, (0, entry_server_js_1.render)(url, context)];
+                return [4 /*yield*/, (0, entry_server_1.render)(url, context)];
             case 2:
                 appHtml = _a.sent();
-                html = template.replace("<!--app-html-->", appHtml);
+                html = template.replace('<!--app-html-->', appHtml);
                 filePath = "dist/static".concat(url === '/' ? '/index' : url, ".html");
                 fs.writeFileSync(toAbsolute(filePath), html);
+                // eslint-disable-next-line no-console
                 console.log('pre-rendered:', filePath);
                 _a.label = 3;
             case 3:
