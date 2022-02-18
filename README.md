@@ -58,6 +58,14 @@ Run the static site locally (using NodeJS). URL: _localhost:5000_
 
 Run storybook. URL: _localhost:6006_
 
+`$ yarn run lint`
+
+Run code quality checks
+
+`$ yarn run lint:fix`
+
+Attempt to automatically fix lint issues
+
 
 ### TODO:
 
