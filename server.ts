@@ -68,7 +68,6 @@ export async function createServer(
 
       const context: any = {};
       const appHtml = render(url, context);
-      console.log(url);
 
       if (context.url) {
         // Somewhere a `<Redirect>` was rendered
