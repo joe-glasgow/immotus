@@ -10,7 +10,7 @@ const HomePage: FC = () => {
   const navigate = useNavigate();
   return (
     <>
-      <Typography paragraph variant="subtitle">
+      <Typography paragraph variant="subtitle1">
         <i>Immotus</i>
         {' '}
         - unmoved,
@@ -33,7 +33,7 @@ const HomePage: FC = () => {
           </CardContent>
         </Card>
       </Container>
-      <Button variant="outline" onClick={() => navigate('/about')}>Usage</Button>
+      <Button variant="contained" onClick={() => navigate('/about')}>Usage</Button>
     </>
   );
 };

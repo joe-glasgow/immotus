@@ -6,15 +6,15 @@ import './index.css';
 import { Routes } from './config/Routes';
 
 export const render = (location: string) => {
-  const sheet = new ServerStyleSheet();
-  const html = renderToString(sheet.collectStyles(
-    <StrictMode>
-      <StaticRouter location={location}>
-        <Routes />
-      </StaticRouter>
-    </StrictMode>,
-  ));
-  const styleTags = sheet.getStyleTags();
-  sheet.seal();
-  return [styleTags, html];
+    const sheet = new ServerStyleSheet();
+    const html = renderToString(sheet.collectStyles(
+        <StrictMode>
+            <StaticRouter location={location}>
+                <Routes />
+            </StaticRouter>
+        </StrictMode>,
+    ));
+    const styleTags = sheet.getStyleTags();
+    sheet.seal();
+    return [styleTags, html];
 };

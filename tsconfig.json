@@ -42,7 +42,6 @@
     "prerender.ts",
     "static-server.ts",
     "environment.d.ts",
-    "server.ts",
     "vite.config.ts",
     "styled.d.ts"
   ],
