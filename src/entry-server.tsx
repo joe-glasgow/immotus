@@ -2,7 +2,6 @@ import React, { StrictMode } from 'react';
 import { ServerStyleSheet } from 'styled-components';
 import { renderToString } from 'react-dom/server';
 import { StaticRouter } from 'react-router-dom/server';
-import './index.css';
 import { Routes } from './config/Routes';
 
 export const render = (location: string) => {

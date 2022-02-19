@@ -10,7 +10,7 @@
     "build:client": "vite build --outDir dist/client",
     "build:server": "vite build --ssr src/entry-server.tsx --outDir dist/server",
     "generate": "yarn run build && tsc prerender.ts; node prerender",
-    "static": "yarn run generate && ts-node static-server.ts",
+    "static": "NODE_ENV=production yarn run generate && ts-node static-server.ts",
     "debug": "node --inspect-brk server",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",

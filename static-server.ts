@@ -11,10 +11,13 @@ const notFound = (res:Response, filePath: string) => fs.readFile(filePath, 'utf8
   // TODO create pretty static page for this
   return res.status(500).end(err.stack);
 });
+
+const excludedPages: (string|Buffer)[] = ['/_app'];
 // path.join(__dirname, 'src/pages')
-const routes: string[] = fs.readdirSync(path.join(__dirname, 'src/pages'), { withFileTypes: false })
-// @ts-ignore
-  .map((item) => `/${item.split('.').slice(0, -1).join('.')}`);
+const routes: (string | undefined)[] = fs.readdirSync(path.join(__dirname, 'src/pages'), {withFileTypes: false})
+    // @ts-ignore
+    .map((item) => `/${item.split('.').slice(0, -1).join('.')}`)
+    .filter((page) => !excludedPages.includes(page));
 // add the home route
 routes.push('/');
 // gzip compression

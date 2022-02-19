@@ -1,7 +1,6 @@
 import { ThemeProvider } from 'styled-components'
 import { StylesProvider } from '@mui/styles'
 import theme from "@/theme/theme";
-import '../src/index.css';
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
